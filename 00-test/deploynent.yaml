@@ -19,6 +19,6 @@ spec:
       imagePullSecrets:
         - name: docker-keys
       containers:
-      - image: federaffoni/testrumore
+      - image: hub.docker.com/repository/docker/federaffoni/testrumore/
         name: bgd
         resources: {}
