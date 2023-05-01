@@ -21,4 +21,5 @@ spec:
       containers:
       - image: federaffoni/testrumore:latest
         name: testrumore
+        imagePullPolicy: IfNotPresent
         resources: {}
