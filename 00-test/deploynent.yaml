@@ -17,7 +17,7 @@ spec:
         app: bgd
     spec:
       imagePullSecrets:
-        - name: docker-keys
+        - name: regcred
       containers:
       - image: federaffoni/testrumore:latest
         name: testrumore
