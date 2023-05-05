@@ -4,7 +4,7 @@ metadata:
   labels:
     app: bgd
   name: bgd
-  namespace: test
+  namespace: default
 spec:
   replicas: 1
   selector:
@@ -19,7 +19,7 @@ spec:
       imagePullSecrets:
         - name: regcred
       containers:
-      - image: federaffoni/testrumore:latest
+      - image: n0ise
         name: testrumore
         imagePullPolicy: IfNotPresent
         resources: {}
