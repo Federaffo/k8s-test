@@ -16,6 +16,8 @@ spec:
       containers:
         - name: postgres
           image: postgres
+        environment:
+          - POSTGRES_PASSWORD: password
 ---
 apiVersion: v1
 kind: Service
