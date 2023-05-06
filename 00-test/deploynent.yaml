@@ -21,3 +21,21 @@ spec:
         name: testrumore
         imagePullPolicy: IfNotPresent
         resources: {}
+
+  
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: bgd
+  name: bgd
+spec:
+  type: ClusterIP
+  selector:
+    app: bgd
+  ports:
+    - port: 9999
+      protocol: TCP
+      targetPort: 9999
