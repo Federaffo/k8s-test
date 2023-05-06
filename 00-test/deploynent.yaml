@@ -17,7 +17,7 @@ spec:
         app: bgd
     spec:
       containers:
-      - image: n0ise
+      - image: n0ise:latest
         name: testrumore
         imagePullPolicy: Never
         resources: {}
