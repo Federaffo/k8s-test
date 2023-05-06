@@ -8,6 +8,7 @@ metadata:
   name: bgd
   namespace: test
 spec:
+  type: ClusterIP
   ports:
   - port: 9999
     protocol: TCP
