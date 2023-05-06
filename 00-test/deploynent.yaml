@@ -17,7 +17,7 @@ spec:
         app: bgd
     spec:
       containers:
-      - image: n0ise:latest
+      - image: localhost:5000/n0ise
         name: testrumore
-        imagePullPolicy: Never
+        imagePullPolicy: IfNotPresent
         resources: {}
