@@ -16,8 +16,6 @@ spec:
       labels:
         app: bgd
     spec:
-      imagePullSecrets:
-        - name: regcred
       containers:
       - image: n0ise
         name: testrumore
