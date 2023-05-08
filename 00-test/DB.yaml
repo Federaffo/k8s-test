@@ -18,8 +18,8 @@ spec:
         tier: database
     spec:
       containers:
-        - name: postgresql
-          image: postgres:12
+        - name: postgres
+          image: postgres
           imagePullPolicy: "IfNotPresent"
           env:
             - name: POSTGRES_PASSWORD
