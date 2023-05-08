@@ -83,6 +83,38 @@ data:
         UNIQUE (username)
     );
 
+    CREATE TABLE IF NOT EXISTS input (
+    input_id uuid PRIMARY KEY, 
+    link varchar(255), 
+    upvote bigint,
+    UNIQUE (link)
+    );
+
+    CREATE TABLE IF NOT EXISTS followers (user_id uuid, following_user_id uuid);
+
+    CREATE TABLE IF NOT EXISTS repost (
+    repost_id uuid PRIMARY KEY NOT NULL,
+    input_id uuid NOT NULL,
+    title varchar(255) NOT NULL,
+    created_at timestamp NOT NULL,
+    author uuid NOT NULL
+);
+
+    CREATE TABLE IF NOT EXISTS upvotes (
+    user_id uuid  NOT NULL,
+    repost_id uuid  NOT NULL,
+    input_id uuid NOT NULL,
+    PRIMARY KEY(user_id, repost_id)
+);
+
+
+    CREATE TABLE IF NOT EXISTS tokens (
+    token_id uuid PRIMARY KEY,
+    token varchar(255) NOT NULL,
+    payload json NOT NULL
+);
+
+
 ---
 
 apiVersion: v1
