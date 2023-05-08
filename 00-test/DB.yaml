@@ -22,10 +22,10 @@ spec:
           image: postgres:12
           imagePullPolicy: "IfNotPresent"
           env:
-            - name: POSTGRES_USER
-              value: user
             - name: POSTGRES_PASSWORD
-              value: password
+              value: "password"
+            - name: POSTGRES_USER
+              value: "user"
           ports:
             - containerPort: 5432
               name: postgresql
