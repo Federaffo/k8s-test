@@ -70,3 +70,20 @@ spec:
   resources:
     requests:
       storage: 5Gi
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgresql-initdb-config
+data:
+  init.sql: |
+  CREATE TABLE IF NOT EXISTS users (
+      user_id uuid PRIMARY KEY,
+      username varchar(127),
+      last_name varchar(255),
+      first_name varchar(255),
+      password varchar(255),
+      email varchar(255),
+      UNIQUE (username)
+  );
