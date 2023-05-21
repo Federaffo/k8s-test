@@ -17,8 +17,8 @@ spec:
         app: bgd
     spec:
       containers:
-      - image: n0ise
-        name: testrumore
+      - image: gcr.io/n0ise-385214/n0ise
+        name: n0ise
         imagePullPolicy: IfNotPresent
         resources: {}
 
