@@ -32,9 +32,9 @@ metadata:
     app: webapp
   name: webapp
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
-    app: webapp
+    app: n0ise
   ports:
     - port: 3000
       protocol: TCP
