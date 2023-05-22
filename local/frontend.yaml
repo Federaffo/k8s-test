@@ -34,7 +34,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: n0ise
+    app: webapp
   ports:
     - port: 3000
       protocol: TCP
