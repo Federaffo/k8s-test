@@ -17,7 +17,7 @@ spec:
         app: webapp
     spec:
       containers:
-      - image: webapp
+      - image: gcr.io/n0ise-385214/webapp
         name: frontend
         imagePullPolicy: IfNotPresent
         resources: {}
