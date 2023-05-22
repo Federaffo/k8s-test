@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: webapp
+  name: webapp
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapp
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      containers:
+      - image: webapp
+        name: frontend
+        imagePullPolicy: IfNotPresent
+        resources: {}
+
+  
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: webapp
+  name: webapp
+spec:
+  type: ClusterIP
+  selector:
+    app: webapp
+  ports:
+    - port: 9999
+      protocol: TCP
+      targetPort: 9999
