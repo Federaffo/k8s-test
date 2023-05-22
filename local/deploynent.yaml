@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: bgd
+  name: bgd
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bgd
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: bgd
+    spec:
+      containers:
+      - image: n0ise
+        name: testrumore
+        imagePullPolicy: IfNotPresent
+        resources: {}
+
+  
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: bgd
+  name: bgd
+spec:
+  type: ClusterIP
+  selector:
+    app: bgd
+  ports:
+    - port: 9999
+      protocol: TCP
+      targetPort: 9999
