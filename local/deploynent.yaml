@@ -21,6 +21,9 @@ spec:
         name: testrumore
         imagePullPolicy: IfNotPresent
         resources: {}
+        env: 
+          - name: NEXT_PUBLIC_BACKEND_URL_LOCAL 
+            value: "10.97.247.159:9999"
 
   
 ---
