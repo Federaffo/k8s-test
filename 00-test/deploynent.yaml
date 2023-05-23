@@ -17,7 +17,7 @@ spec:
         app: n0ise
     spec:
       containers:
-      - image: gcr.io/n0ise-385214/n0ise
+      - image: gcr.io/n0ise-385214/n0ise:0.02
         name: n0ise
         imagePullPolicy: IfNotPresent
         resources: {}
