@@ -32,7 +32,7 @@ metadata:
     app: n0ise
   name: n0ise
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: n0ise
   ports:
