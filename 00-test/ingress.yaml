@@ -7,15 +7,13 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
-  - host: api.n0ise.io
-    http:
-      paths:
-        - backend:
-            serviceName: n0ise
-            servicePort: 9999
   - host: n0ise.io
     http:
-      paths:
-        - backend:
-            serviceName: webapp
-            servicePort: 80
+        paths:
+        - pathType: Prefix
+          path: "/"
+          backend:
+            service:
+              name: webapp
+              port:
+                number: 80
