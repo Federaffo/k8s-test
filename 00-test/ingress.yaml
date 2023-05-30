@@ -17,3 +17,13 @@ spec:
               name: webapp
               port:
                 number: 80
+  - host: api.n0ise.io
+    http:
+        paths:
+        - pathType: Prefix
+          path: "/"
+          backend:
+            service:
+              name: n0ise
+              port:
+                number: 9999
