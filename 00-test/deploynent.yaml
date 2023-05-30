@@ -32,7 +32,6 @@ metadata:
     app: n0ise
   name: n0ise
 spec:
-  type: LoadBalancer
   selector:
     app: n0ise
   ports:

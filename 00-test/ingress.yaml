@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress
+spec:
+  rules:
+  - host: api.n0ise.io
+    http:
+      paths:
+        - backend:
+            serviceName: n0ise
+            servicePort: 9999
+  - host: n0ise.io
+    http:
+      paths:
+        - backend:
+            serviceName: webapp
+            servicePort: 80

@@ -32,7 +32,6 @@ metadata:
     app: webapp
   name: webapp
 spec:
-  type: LoadBalancer
   selector:
     app: webapp
   ports:
